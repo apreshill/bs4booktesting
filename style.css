@@ -8,6 +8,7 @@ p code {
 pre {
   word-break: normal;
   word-wrap: normal;
+  padding-right: 60px;
 }
 pre code {
   white-space: inherit;
@@ -22,8 +23,4 @@ pre code {
 
 h1 {
   color: red;
-}
-
-pre.sourceCode.code-with-copy {
-    padding-right: 25px;
 }
