@@ -23,3 +23,7 @@ pre code {
 h1 {
   color: red;
 }
+
+pre.sourceCode.code-with-copy {
+    padding-right: 25px;
+}
