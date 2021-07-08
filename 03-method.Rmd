@@ -1,3 +1,5 @@
+# (PART) A numbered part {-}
+
 # Methods
 
 We describe our methods in this chapter.
