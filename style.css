@@ -8,10 +8,17 @@ p code {
 pre {
   word-break: normal;
   word-wrap: normal;
-  padding-right: 60px;
+  /* padding-right: 60px; */
 }
+
+pre .copy {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
 pre code {
-  white-space: inherit;
+  white-space: pre-wrap;
 }
 
 pre code {

@@ -1,5 +1,10 @@
 # Final Words
 
+```{r include=FALSE}
+options(width = 65)
+```
+
+
 We have finished a nice book.
 
 ::: {.rmdnote}
@@ -15,6 +20,26 @@ dplyr::glimpse(beaver1)
 
 :::
 
+
+```{r collapse=TRUE}
+dplyr::glimpse(beaver1)
+```
+
+
+We have finished a nice book.
+
+::: {.rmdnote}
+We are in a special callout block and any code block will have a background filling the whole width of the block. 
+
+Let's try !
+
+```{r collapse=TRUE}
+dplyr::glimpse(beaver1)
+```
+
+:::
+
+This should align with any background code block outside of a box
 
 ```{r collapse=TRUE}
 dplyr::glimpse(beaver1)

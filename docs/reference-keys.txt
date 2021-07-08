@@ -4,7 +4,5 @@ prerequisites
 intro
 literature
 methods
-applications
-example-one
-example-two
+part
 final-words
