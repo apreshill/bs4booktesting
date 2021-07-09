@@ -48,7 +48,7 @@ head(palmerpenguins::penguins)
 
 ## Wrap + collapse
 
-```{r class.output="wrapme", collapse=TRUE}
+```{r class.source="wrapme", collapse=TRUE}
 head(palmerpenguins::penguins)
 ```
 
