@@ -67,21 +67,125 @@
 <span class="co"># devtools::install_github("rstudio/bookdown")</span></code></pre></div>
 <p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
+<div id="scroll" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Scroll<a class="anchor" aria-label="anchor" href="#scroll"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">palmerpenguins</span><span class="fu">::</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/reference/penguins.html">penguins</a></span><span class="op">)</span></code></pre></div>
+<pre><code>## # A tibble: 6 x 8
+##   species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex  
+##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt;
+## 1 Adelie  Torge…           39.1          18.7              181        3750 male 
+## 2 Adelie  Torge…           39.5          17.4              186        3800 fema…
+## 3 Adelie  Torge…           40.3          18                195        3250 fema…
+## 4 Adelie  Torge…           NA            NA                 NA          NA &lt;NA&gt; 
+## 5 Adelie  Torge…           36.7          19.3              193        3450 fema…
+## 6 Adelie  Torge…           39.3          20.6              190        3650 male 
+## # … with 1 more variable: year &lt;int&gt;</code></pre>
+</div>
+<div id="wrap" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Wrap<a class="anchor" aria-label="anchor" href="#wrap"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">60</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">palmerpenguins</span><span class="fu">::</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/reference/penguins.html">penguins</a></span><span class="op">)</span></code></pre></div>
+<pre class="wrapme"><code>## # A tibble: 6 x 8
+##   species island    bill_length_mm bill_depth_mm
+##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+## 1 Adelie  Torgersen           39.1          18.7
+## 2 Adelie  Torgersen           39.5          17.4
+## 3 Adelie  Torgersen           40.3          18  
+## 4 Adelie  Torgersen           NA            NA  
+## 5 Adelie  Torgersen           36.7          19.3
+## 6 Adelie  Torgersen           39.3          20.6
+## # … with 4 more variables: flipper_length_mm &lt;int&gt;,
+## #   body_mass_g &lt;int&gt;, sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+<div id="scroll-collapse" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Scroll + collapse<a class="anchor" aria-label="anchor" href="#scroll-collapse"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">palmerpenguins</span><span class="fu">::</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/reference/penguins.html">penguins</a></span><span class="op">)</span>
+<span class="co">## # A tibble: 6 x 8</span>
+<span class="co">##   species island    bill_length_mm bill_depth_mm</span>
+<span class="co">##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;</span>
+<span class="co">## 1 Adelie  Torgersen           39.1          18.7</span>
+<span class="co">## 2 Adelie  Torgersen           39.5          17.4</span>
+<span class="co">## 3 Adelie  Torgersen           40.3          18  </span>
+<span class="co">## 4 Adelie  Torgersen           NA            NA  </span>
+<span class="co">## 5 Adelie  Torgersen           36.7          19.3</span>
+<span class="co">## 6 Adelie  Torgersen           39.3          20.6</span>
+<span class="co">## # … with 4 more variables: flipper_length_mm &lt;int&gt;,</span>
+<span class="co">## #   body_mass_g &lt;int&gt;, sex &lt;fct&gt;, year &lt;int&gt;</span></code></pre></div>
+</div>
+<div id="wrap-collapse" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> Wrap + collapse<a class="anchor" aria-label="anchor" href="#wrap-collapse"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">palmerpenguins</span><span class="fu">::</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/reference/penguins.html">penguins</a></span><span class="op">)</span>
+<span class="co">## # A tibble: 6 x 8</span>
+<span class="co">##   species island    bill_length_mm bill_depth_mm</span>
+<span class="co">##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;</span>
+<span class="co">## 1 Adelie  Torgersen           39.1          18.7</span>
+<span class="co">## 2 Adelie  Torgersen           39.5          17.4</span>
+<span class="co">## 3 Adelie  Torgersen           40.3          18  </span>
+<span class="co">## 4 Adelie  Torgersen           NA            NA  </span>
+<span class="co">## 5 Adelie  Torgersen           36.7          19.3</span>
+<span class="co">## 6 Adelie  Torgersen           39.3          20.6</span>
+<span class="co">## # … with 4 more variables: flipper_length_mm &lt;int&gt;,</span>
+<span class="co">## #   body_mass_g &lt;int&gt;, sex &lt;fct&gt;, year &lt;int&gt;</span></code></pre></div>
+</div>
+<div id="more-long-lines" class="section level2" number="1.5">
+<h2>
+<span class="header-section-number">1.5</span> More long lines<a class="anchor" aria-label="anchor" href="#more-long-lines"><i class="fas fa-link"></i></a>
+</h2>
 <pre><code>x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x</code></pre>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="va">letters</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>## a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z</code></pre>
+</div>
+<div id="wrap-width-60" class="section level2" number="1.6">
+<h2>
+<span class="header-section-number">1.6</span> Wrap + width = 60<a class="anchor" aria-label="anchor" href="#wrap-width-60"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>width<span class="op">=</span><span class="fl">60</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">palmerpenguins</span><span class="fu">::</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/reference/penguins.html">penguins</a></span><span class="op">)</span></code></pre></div>
+<pre class="wrapme"><code>## # A tibble: 6 x 8
+##   species island    bill_length_mm bill_depth_mm
+##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+## 1 Adelie  Torgersen           39.1          18.7
+## 2 Adelie  Torgersen           39.5          17.4
+## 3 Adelie  Torgersen           40.3          18  
+## 4 Adelie  Torgersen           NA            NA  
+## 5 Adelie  Torgersen           36.7          19.3
+## 6 Adelie  Torgersen           39.3          20.6
+## # … with 4 more variables: flipper_length_mm &lt;int&gt;,
+## #   body_mass_g &lt;int&gt;, sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
 
+</div>
 </div>
   <div class="chapter-nav">
 <div class="empty"></div>
 <div class="next"><a href="intro.html"><span class="header-section-number">2</span> Introduction</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#prerequisites"><span class="header-section-number">1</span> Prerequisites</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#prerequisites"><span class="header-section-number">1</span> Prerequisites</a></li>
+<li><a class="nav-link" href="#scroll"><span class="header-section-number">1.1</span> Scroll</a></li>
+<li><a class="nav-link" href="#wrap"><span class="header-section-number">1.2</span> Wrap</a></li>
+<li><a class="nav-link" href="#scroll-collapse"><span class="header-section-number">1.3</span> Scroll + collapse</a></li>
+<li><a class="nav-link" href="#wrap-collapse"><span class="header-section-number">1.4</span> Wrap + collapse</a></li>
+<li><a class="nav-link" href="#more-long-lines"><span class="header-section-number">1.5</span> More long lines</a></li>
+<li><a class="nav-link" href="#wrap-width-60"><span class="header-section-number">1.6</span> Wrap + width = 60</a></li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

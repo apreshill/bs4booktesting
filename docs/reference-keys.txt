@@ -1,6 +1,12 @@
 fig:nice-fig
 tab:nice-tab
 prerequisites
+scroll
+wrap
+scroll-collapse
+wrap-collapse
+more-long-lines
+wrap-width-60
 intro
 literature
 methods

@@ -26,6 +26,36 @@ Remember each Rmd file contains one and only one chapter, and a chapter is defin
 
 To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
 
+## Scroll
+
+```{r}
+head(palmerpenguins::penguins)
+```
+
+
+## Wrap
+
+```{r class.output="wrapme"}
+options(width = 60)
+head(palmerpenguins::penguins)
+```
+
+## Scroll + collapse
+
+```{r collapse=TRUE}
+head(palmerpenguins::penguins)
+```
+
+
+## Wrap + collapse
+
+```{r class.output="wrapme", collapse=TRUE}
+head(palmerpenguins::penguins)
+```
+
+
+## More long lines
+
 ```{r echo=FALSE, collapse=TRUE, comment=NA}
 cat(rep("x", 100))
 cat(rep("x", 100))
@@ -38,6 +68,12 @@ cat(rep(letters, 10))
 ```
 
 
+## Wrap + width = 60
+
+```{r class.output="wrapme"}
+options(width=60)
+head(palmerpenguins::penguins)
+```
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
