@@ -16,9 +16,9 @@ pre code {
 
 pre code {
   background-color: transparent;
-  white-space: pre-wrap;
-  word-break: break-all;
-  overflow-wrap: break-word;
+  white-space: unset;
+  word-break: unset;
+  overflow-wrap: unset;
 }
 
 h1 {
