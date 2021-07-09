@@ -13,10 +13,6 @@ pre code {
   overflow-wrap: unset;
 }
 
-pre > code.sourceCode {
-    word-wrap: normal;
-}
-
 .wrapme {
   white-space: pre-wrap;
   word-break: break-all;
