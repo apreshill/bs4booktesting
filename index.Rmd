@@ -36,7 +36,6 @@ head(palmerpenguins::penguins)
 ## Wrap
 
 ```{r class.output="wrapme"}
-options(width = 60)
 head(palmerpenguins::penguins)
 ```
 
